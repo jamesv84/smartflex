@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("button").click(
-            alert("Data: " + data + "\nStatus: " + status);
-    
-});
-</script>
-</head>
 <body>
 
-<button>Send an HTTP GET request to a page and get the result back</button>
+<p>Click the button to display an alert box:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    alert("I am an alert box!");
+}
+</script>
 
 </body>
 </html>
