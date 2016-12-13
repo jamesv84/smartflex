@@ -11,7 +11,7 @@
     xmlHttp.open( "GET", "https://iotjv.mybluemix.net/getresults", false ); // false for synchronous request
     xmlHttp.send( null );
     alert(xmlHttp.responseText);
-        document.getElementById("content").innerHTML = xmlHttp.responseText;
+        document.getElementById("demo").innerHTML = xmlHttp.responseText;
 }
 
 </script>
@@ -20,7 +20,7 @@
 
 
     
-<p id="content"></p>
+<p id="demo"></p>
 
 
 
