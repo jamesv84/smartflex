@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta http-equiv="refresh" content="20; URL=https://jamesv84.github.io/smartflex/">
-<body onload="myFunction()">
+<body>
 
 
     
@@ -9,15 +9,14 @@
 
 
 <script>
-function myFunction() {
-//  alert("I am an alert box!");
+
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", "https://iotjv.mybluemix.net/getresults", false ); // false for synchronous request
     xmlHttp.send( null );
     alert(xmlHttp.responseText);
         document.getElementById("content").innerHTML = xmlHttp.responseText;
 
-}
+
 </script>
 
 </body>
