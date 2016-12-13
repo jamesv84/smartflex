@@ -10,7 +10,7 @@
 function myFunction() {
     alert("I am an alert box!");
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "http://www.google.com", false ); // false for synchronous request
+    xmlHttp.open( "GET", "http://httpbin.org/ip", false ); // false for synchronous request
     xmlHttp.send( null );
     alert(xmlHttp.responseText);
 }
