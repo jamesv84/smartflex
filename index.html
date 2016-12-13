@@ -5,7 +5,7 @@
     <head>
 
     </head>
-<body onload="onloadCall()">
+<body>
 
 
     
@@ -14,7 +14,7 @@
 
         <script type="text/javascript">
 
-    function onloadCall()
+window.onload = function onloadCall()
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", "https://iotjv.mybluemix.net/getresults", false ); // false for synchronous request
