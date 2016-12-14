@@ -12,20 +12,12 @@
 
         <script type="text/javascript">
             
-function preload(arrayOfImages) {
-    $(arrayOfImages).each(function(){
-        $('<img/>')[0].src = this;
-        // Alternatively you could use:
-        // (new Image()).src = this;
-    });
+window.onload = function preload() {
+        (new Image()).src = 'https://github.com/jamesv84/smartflex/blob/master/occupied.png?raw=true';
+        (new Image()).src = 'https://github.com/jamesv84/smartflex/blob/master/all-free.png?raw=true';
 }
 
-// Usage:
-
-preload([
-    'https://github.com/jamesv84/smartflex/blob/master/occupied.png?raw=true',
-    'https://github.com/jamesv84/smartflex/blob/master/all-free.png?raw=true'
-]);            
+// Usage:    
             
             
 var createCORSRequest = function(method, url) {
