@@ -11,16 +11,38 @@
 
 
         <script type="text/javascript">
+            
+var createCORSRequest = function(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // Most browsers.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // IE8 & IE9
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+};
 
-setInterval(function onloadCall()
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "http://www.whateverorigin.org/get?url=https://iotjv.mybluemix.net/getresults", false ); // false for synchronous request
-    xmlHttp.send( null );
-var objJSON = eval("(function(){return " + xmlHttp.responseText + ";})()");
-        document.getElementById("demo").innerHTML = objJSON.contents;
-   
+var url = 'https://iotjv.mybluemix.net/getresults';
+var method = 'GET';
+var xhr = createCORSRequest(method, url);
+
+xhr.send();
+            
+setInterval(function() {
+  document.getElementById("demo").innerHTML = xhr.responseText
 }, 1250);
+
+xhr.onerror = function() {
+  // Error code goes here.
+};
+
+
 
 </script>
 </body>
