@@ -12,7 +12,9 @@
 
         <script type="text/javascript">
             
-var createCORSRequest = function(method, url) {
+setInterval(function() {
+  var url = 'https://iotjv.mybluemix.net/getresults';
+  var method = 'GET';
   var xhr = new XMLHttpRequest();
   if ("withCredentials" in xhr) {
     // Most browsers.
@@ -25,23 +27,10 @@ var createCORSRequest = function(method, url) {
     // CORS not supported.
     xhr = null;
   }
-  return xhr;
-};
-
-var url = 'https://iotjv.mybluemix.net/getresults';
-var method = 'GET';
-var xhr = createCORSRequest(method, url);
-
-xhr.send();
-            
-setInterval(function() {
-    createCORSRequest(method, url);
+  xhr.send();
   document.getElementById("demo").innerHTML = xhr.responseText
 }, 1250);
 
-xhr.onerror = function() {
-  // Error code goes here.
-};
 
 
 
