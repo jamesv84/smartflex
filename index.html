@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <meta http-equiv="refresh" content="3; URL=https://jamesv84.github.io/smartflex/">
-
     <head>
 
     </head>
@@ -14,7 +12,7 @@
 
         <script type="text/javascript">
 
-window.onload = function onloadCall()
+setInterval(function onloadCall()
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", "https://iotjv.mybluemix.net/getresults", false ); // false for synchronous request
@@ -22,7 +20,7 @@ window.onload = function onloadCall()
 
         document.getElementById("demo").innerHTML = xmlHttp.responseText;
    
-}
+}, 3000);
 
 </script>
 </body>
