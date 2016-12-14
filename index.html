@@ -35,6 +35,7 @@ var xhr = createCORSRequest(method, url);
 xhr.send();
             
 setInterval(function() {
+    createCORSRequest(method, url);
   document.getElementById("demo").innerHTML = xhr.responseText
 }, 1250);
 
