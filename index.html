@@ -16,18 +16,8 @@ setInterval(function() {
   var url = 'https://iotjv.mybluemix.net/getresults';
   var method = 'GET';
   var xhr = new XMLHttpRequest();
-  if ("withCredentials" in xhr) {
-    // Most browsers.
-    xhr.open(method, url, true);
-  } else if (typeof XDomainRequest != "undefined") {
-    // IE8 & IE9
-    xhr = new XDomainRequest();
-    xhr.open(method, url);
-  } else {
-    // CORS not supported.
-    xhr = null;
-  }
-  xhr.send();
+  xhr.open(method, url, false);
+  xhr.send( null );
   document.getElementById("demo").innerHTML = xhr.responseText
 }, 1250);
 
