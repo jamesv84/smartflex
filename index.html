@@ -15,10 +15,10 @@
 setInterval(function onloadCall()
 {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://iotjv.mybluemix.net/getresults", false ); // false for synchronous request
+    xmlHttp.open( "GET", "http://www.whateverorigin.org/get?url=https://iotjv.mybluemix.net/getresults", false ); // false for synchronous request
     xmlHttp.send( null );
-
-        document.getElementById("demo").innerHTML = xmlHttp.responseText;
+var objJSON = eval("(function(){return " + xmlHttp.responseText + ";})()");
+        document.getElementById("demo").innerHTML = objJSON.contents;
    
 }, 1250);
 
