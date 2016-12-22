@@ -18,9 +18,9 @@ setInterval(function() {
   xhr.open(method, url, false);
   xhr.send( null );
   if(xhr.responseText == "Vacant"){  
-    document.getElementById("demo").innerHTML = "<img src='restaurant-vacant.png'>";
+    document.getElementById("demo").innerHTML = "<img src='restaurant-vacant.jpg'>";
   } else if(xhr.responseText == "Occupied"){  
-    document.getElementById("demo").innerHTML = "<img src='restaurant-occupied.png'>";
+    document.getElementById("demo").innerHTML = "<img src='restaurant-occupied.jpg'>";
   }
 
 }, 1250);
