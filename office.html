@@ -10,7 +10,7 @@
 <p id="demo"></p>
 
 
-        <script type="text/javascript">
+ <script type="text/javascript">
             
 setInterval(function() {
   var url = 'https://iotjv.mybluemix.net/seatStatus';
@@ -19,9 +19,9 @@ setInterval(function() {
   xhr.open(method, url, false);
   xhr.send( null );
   if(xhr.responseText == "Vacant"){  
-    document.getElementById("demo").innerHTML = "<img src='office-vacant.gif'>";
+    document.getElementById("demo").innerHTML = "<img src='office-vacant.png'>";
   } else if(xhr.responseText == "Occupied"){  
-    document.getElementById("demo").innerHTML = "<img src='office-occupied.gif'>";
+    document.getElementById("demo").innerHTML = "<img src='office-occupied.png'>";
   }
 
 }, 1250);
