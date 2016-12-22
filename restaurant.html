@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+<body>
+
+    
+<p id="demo"></p>
+
+
+ <script type="text/javascript">
+            
+setInterval(function() {
+  var url = 'https://iotjv.mybluemix.net/seatStatus';
+  var method = 'GET';
+  var xhr = new XMLHttpRequest();
+  xhr.open(method, url, false);
+  xhr.send( null );
+  if(xhr.responseText == "Vacant"){  
+    document.getElementById("demo").innerHTML = "<img src='restaurant-vacant.png'>";
+  } else if(xhr.responseText == "Occupied"){  
+    document.getElementById("demo").innerHTML = "<img src='restaurant-occupied.png'>";
+  }
+
+}, 1250);
+
+
+
+
+</script>
+</body>
+</html>
