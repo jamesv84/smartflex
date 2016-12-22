@@ -19,9 +19,9 @@ setInterval(function() {
   xhr.open(method, url, false);
   xhr.send( null );
   if(xhr.responseText == "Vacant"){  
-    document.getElementById("demo").innerHTML = "<img src="office-vacant.gif">";
+    document.getElementById("demo").innerHTML = "<img src='office-vacant.gif'>";
   } else if(xhr.responseText == "Occupied"){  
-    document.getElementById("demo").innerHTML = "<img src="office-occupied.gif">";
+    document.getElementById("demo").innerHTML = "<img src='office-occupied.gif'>";
   }
 
 }, 1250);
